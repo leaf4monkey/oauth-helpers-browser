@@ -1,9 +1,11 @@
 var packageName = 'leaf4monkey:oauth-helpers-browser';
 var mainModule = './lib/index.js';
 var mainModuleEnv = 'web.browser';
+var version = '0.0.5';
+
 Package.describe({
   name: packageName,
-  version: '0.0.3',
+  version: version,
   summary: 'Help you create oauth packages rapidly.',
   git: '',
   documentation: 'README.md'
@@ -27,7 +29,7 @@ var commonDependencies = function (api) {
   api.use('random', mainModuleEnv);
   api.use('underscore', mainModuleEnv);
 
-  api.use('leaf4monkey:oauth-helpers-common@0.0.2', mainModuleEnv);
+  api.use('leaf4monkey:oauth-helpers-common@' + version, mainModuleEnv);
 };
 
 Package.onUse(function(api) {
